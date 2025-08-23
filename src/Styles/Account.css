@@ -1,0 +1,52 @@
+.account-page {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabs button.active {
+  background-color: #333;
+  color: white;
+}
+
+.tab-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tab-content label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.tab-content input,
+.tab-content select {
+  margin-top: 5px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+ body{
+    background-color: #f0f0f0;
+ }
