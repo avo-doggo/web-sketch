@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/web-sketch/static/css/main.eb68cdae.css",
+    "main.js": "/web-sketch/static/js/main.b08789b2.js",
+    "static/js/453.0029077f.chunk.js": "/web-sketch/static/js/453.0029077f.chunk.js",
+    "static/media/WSLogo.png": "/web-sketch/static/media/WSLogo.3ac9613456da5af648ca.png",
+    "static/media/Penciltool.png": "/web-sketch/static/media/Penciltool.d1016a04cb0063912174.png",
+    "static/media/LineTool.png": "/web-sketch/static/media/LineTool.44f754194b2ac0a7d8c9.png",
+    "static/media/TextTool.png": "/web-sketch/static/media/TextTool.936ca408b78bb6042461.png",
+    "static/media/MoveTool.png": "/web-sketch/static/media/MoveTool.05503f268cf54dfae621.png",
+    "static/media/SquareTool.png": "/web-sketch/static/media/SquareTool.0257d9e8bb249e01a2a3.png",
+    "index.html": "/web-sketch/index.html",
+    "main.eb68cdae.css.map": "/web-sketch/static/css/main.eb68cdae.css.map",
+    "main.b08789b2.js.map": "/web-sketch/static/js/main.b08789b2.js.map",
+    "453.0029077f.chunk.js.map": "/web-sketch/static/js/453.0029077f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb68cdae.css",
+    "static/js/main.b08789b2.js"
+  ]
+}
