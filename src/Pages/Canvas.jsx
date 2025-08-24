@@ -1,9 +1,7 @@
 import '../Styles/Canvas.css'
-import { preconnect } from "react-dom";
 import React, {useRef, useEffect, useLayoutEffect, useState, act} from "react";
 import rough from 'roughjs/bundled/rough.esm';
 import getStroke from "perfect-freehand";
-import PaintBrush from '../Images/PaintBrush.png';
 import LineTool from '../Images/LineTool.png';
 import SquareTool from '../Images/SquareTool.png';
 import TextTool from '../Images/TextTool.png';
@@ -491,7 +489,7 @@ if (action === "writing") return;
   const dataUrl = canvas.toDataURL("image/png");
 
   //  JSON project data 
-  // Replace `drawingData` with whatever you’re tracking in state (strokes, shapes, etc.)
+ 
  const projectData = {
   timestamp: Date.now(),
   elements, // save actual elements
@@ -519,6 +517,22 @@ const handleExport = () => {
   link.href = dataUrl;
   link.click();
 };
+
+useEffect(() => {
+  const canvas = document.getElementById("canvas");
+
+  const resizeCanvas = () => {
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+  };
+
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
+
+  return () => window.removeEventListener("resize", resizeCanvas);
+}, []);
+
 
 return (
   <div className="canvas-layout">
@@ -560,8 +574,7 @@ return (
     <div className="canvas-container">
       <canvas
         id="canvas"
-        width={window.innerWidth * 0.6}   // only 60% width
-        height={window.innerHeight * 0.9} // only 85% height
+ 
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -622,14 +635,14 @@ return (
     style={{
         position: "absolute",
       top: 0,
-      right: 200,
+      right: 10,
       width: "100%", // full width of container
-      height: "50px", // adjust height as needed
+      height: "45px",
       backgroundColor: "#161616",
       display: "flex",
       alignItems: "center",
       justifyContent: "flex-end", // buttons on the right
-      padding: "0 10px",
+      paddingRight: "200px",
       zIndex: 10,
     }}
   >
@@ -645,7 +658,7 @@ return (
         {new Intl.NumberFormat("en-GB", { style: "percent" }).format(scale)}
       </span>
       <button onClick={() => onZoom(0.1)}>+</button>
-      <button onClick={undo}>Undo</button>
+      <button onClick={undo} >Undo</button>
       <button onClick={redo}>Redo</button>
     </div>
   </div>

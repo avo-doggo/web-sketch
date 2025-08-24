@@ -24,7 +24,7 @@ export function Account() {
   });
 
   const [theme, setTheme] = useState("light");
-  const [accountVisibility, setAccountVisibility] = useState("public");
+
 
   useEffect(() => {
     const storedUser = JSON.parse(sessionStorage.getItem("userInfo"));

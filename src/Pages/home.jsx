@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Styles/Home.css"; // CSS file for styling
+import "../Styles/Home.css"; 
 
 export  function Home() {
   // --- Login State ---
@@ -56,6 +56,7 @@ export  function Home() {
   return (
     <div className="home-container">
       <h1 className="intro-text">Welcome <br/> to <br/>WebSketch!</h1>
+      
 
       {/* Login Button */}
       <button className="login-btn" onClick={() => setLoginOpen(true)}>
@@ -67,7 +68,8 @@ export  function Home() {
       <button className="signup-btn" onClick={() => setSignUpOpen(true)}>
         Sign Up
       </button>
-
+     
+      <p className="hint-text">*Hint = press the logo in the top corner for the menu!</p>
       {/* Login Popup */}
       {loginOpen && (
         <div className="modal">

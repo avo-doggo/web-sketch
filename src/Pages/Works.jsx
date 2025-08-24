@@ -12,7 +12,7 @@ export function Works() {
 
   const handleLoad = (project) => {
     sessionStorage.setItem("activeWork", JSON.stringify(project));
-    navigate("/Canvas"); // 👈 navigate instead of window.location.href
+    navigate("/Canvas"); 
   };
 
   const handleDelete = (id) => {
@@ -23,7 +23,7 @@ export function Works() {
 
   const handleNewWork = () => {
     sessionStorage.removeItem("activeWork");
-    navigate("/Canvas"); // 👈 navigate instead of window.location.href
+    navigate("/Canvas"); 
   };
 
   return (

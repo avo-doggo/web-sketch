@@ -6,7 +6,7 @@
   cursor: pointer;
   border-radius: 6px;
 }
-
+ 
 .toolbar button img {
   width: 24px;
   height: 24px;
@@ -19,7 +19,7 @@
 }
 
 .toolbar button.active img {
-  filter: brightness(0) invert(1); /* makes icons white if they’re dark */
+  filter: brightness(0) invert(1); /* makes icons white if they’re dark- hopefully */
 }
 
 
@@ -30,6 +30,23 @@
   height: 100vh;
   width: 100vw;
 }
+.canvas-container {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-container canvas {
+  width: 100%;   /* fill available width */
+  height: 100%;  /* fill available height */
+  display: block;
+}
 
 /* Left toolbar */
 .toolbar {
@@ -37,7 +54,9 @@
   flex-direction: column;
   gap: 5px;
   padding: 5px;
-  height: 95%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 100%;
 justify-content: center; 
 grid-row: 1 / span 2; /* spans both rows */
 background: #161616;
@@ -63,9 +82,11 @@ align-items: center;
   background:#161616;
   ;
   padding: 10px;
+  padding-top: 25%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
 }
 
 /* Bottom controls (undo/redo/zoom) */
@@ -76,8 +97,10 @@ align-items: center;
   align-items: center;
   gap: 8px;
   padding: 5px;
-}
-
-body{
   background-color: #161616;
 }
+
+body {
+        margin: 0;
+        padding: 0;
+    }
